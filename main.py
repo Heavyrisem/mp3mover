@@ -20,6 +20,7 @@ if __name__ == "__main__":
     while True:
         for filename in os.listdir(check_path):
             if filename.endswith(".mp3"):
+                time.sleep(0.3) # 읽기가 완료된 후 읽어오기
                 file_counter += 1
                 sh.move(check_path + filename, save_path + "{}.mp3".format(file_counter))
                 print("{} File Moved".format(file_counter))
